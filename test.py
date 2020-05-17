@@ -21,7 +21,7 @@ def x_mp(entrada, M, P):
     return X_MP
 
 X_ext = x_mp(in_ext,M,P)
-X_ext2 = X_ext[M+3:len(X_ext)-(M+3)][:]
+X_ext2 = X_ext[M+3:len(X_ext)-(M+3)][:]()
 out_ext2 = out_ext[M+3:len(out_ext)-(M+3)][:]
 coefs = np.linalg.lstsq(X_ext2,out_ext2,rcond=-1)
 coefs = coefs[0]
